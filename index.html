@@ -46,8 +46,8 @@
         <h2 id="hero-title">Повысь свой уровень PvE с <span>Star Assist</span></h2>
         <p id="hero-desc">Мощный клиентский тренажёр и мод-помощник для одиночной игры и локальных сессий. Автоматическая наводка, умная атака с расчётом кулдауна и превосходный кастомизируемый визуал.</p>
         <div class="hero-btns">
-            <a href="#guide" class="btn-primary" id="hero-get-started-btn">Установить</a>
-            <a href="https://github.com/DmutroKhludov/star-assist" class="btn-secondary" target="_blank" id="hero-github-btn">Исходный код</a>
+            <a href="star-assist-1.0.0.jar" download class="btn-primary" id="hero-download-btn">Скачать .JAR</a>
+            <a href="#guide" class="btn-secondary" id="hero-guide-btn">Инструкция</a>
         </div>
     </section>
 
@@ -152,42 +152,41 @@
     <!-- Setup / Guide Section -->
     <section class="guide-section" id="guide">
         <div class="section-title">
-            <h2>Инструкция по установке и сборке</h2>
+            <h2>Инструкция по установке</h2>
             <p>Три простых шага для запуска модификации</p>
         </div>
         
         <div class="steps-list">
             <!-- Step 1 -->
-            <div class="step-item" id="step-clone">
+            <div class="step-item" id="step-fabric">
                 <div class="step-num">1</div>
                 <div class="step-content">
-                    <h3>Скачайте или клонируйте репозиторий</h3>
-                    <p>Клонируйте репозиторий с исходным кодом мода с помощью git:</p>
-                    <div class="code-container">
-                        <span id="code-git">git clone https://github.com/DmutroKhludov/star-assist.git</span>
-                        <button class="code-btn" onclick="copyText('code-git')">Копировать</button>
-                    </div>
+                    <h3>Установите Fabric Loader</h3>
+                    <p>Скачайте и запустите официальный установщик Fabric для Minecraft версии <b>1.21.1</b> с сайта <a href="https://fabricmc.net/use/" target="_blank" style="color: var(--accent-color); text-decoration: underline;">fabricmc.net</a>.</p>
                 </div>
             </div>
 
             <!-- Step 2 -->
-            <div class="step-item" id="step-config">
+            <div class="step-item" id="step-download">
                 <div class="step-num">2</div>
                 <div class="step-content">
-                    <h3>Настройте версии зависимостей</h3>
-                    <p>Откройте файл <a href="file:///C:/Users/Dimasta/Desktop/anticheat-test/gradle.properties" style="color: var(--accent-color); text-decoration: underline;">gradle.properties</a>. Установите подходящие версии Fabric Loader, Fabric API и Minecraft (1.21.1) с сайта <a href="https://fabricmc.net/develop" target="_blank" style="color: var(--accent-color); text-decoration: underline;">fabricmc.net</a>.</p>
+                    <h3>Скачайте готовый файл мода</h3>
+                    <p>Нажмите на кнопку ниже, чтобы скачать скомпилированную версию мода:</p>
+                    <div style="margin-top: 10px;">
+                        <a href="star-assist-1.0.0.jar" download class="btn-primary" style="padding: 0.65rem 1.75rem; font-size: 0.95rem; display: inline-block;">Скачать star-assist-1.0.0.jar</a>
+                    </div>
                 </div>
             </div>
 
             <!-- Step 3 -->
-            <div class="step-item" id="step-build">
+            <div class="step-item" id="step-mods-folder">
                 <div class="step-num">3</div>
                 <div class="step-content">
-                    <h3>Соберите JAR файл</h3>
-                    <p>Скомпилируйте мод с помощью Gradle. Собранный JAR-файл появится в директории <code>build/libs/</code>:</p>
+                    <h3>Поместите файл в папку mods</h3>
+                    <p>Перенесите скачанный файл в папку <code>mods</code> вашего игрового клиента. На Windows её можно открыть, нажав комбинацию <code>Win + R</code> и вставив следующий путь:</p>
                     <div class="code-container">
-                        <span id="code-build">./gradlew build</span>
-                        <button class="code-btn" onclick="copyText('code-build')">Копировать</button>
+                        <span id="code-mods">%appdata%\.minecraft\mods</span>
+                        <button class="code-btn" onclick="copyText('code-mods')">Копировать</button>
                     </div>
                 </div>
             </div>
