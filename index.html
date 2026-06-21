@@ -15,6 +15,32 @@
 
     <!-- Unique Icons -->
     <link rel="icon" type="image/jpg" href="assets/logo.jpg">
+
+    <!-- Google tag (gtag.js) - Private Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        // Replace 'G-TRACKING_ID' with your real Google Analytics measurement ID
+        gtag('config', 'G-TRACKING_ID');
+
+        // Track Mod Downloads
+        document.addEventListener('DOMContentLoaded', () => {
+            const trackDownload = (buttonName) => {
+                gtag('event', 'download_mod', {
+                    'event_category': 'engagement',
+                    'event_label': 'Star Assist Mod Download',
+                    'button_location': buttonName
+                });
+            };
+
+            document.getElementById('hero-download-btn')?.addEventListener('click', () => trackDownload('Hero Section'));
+            document.getElementById('nav-download-btn')?.addEventListener('click', () => trackDownload('Navbar'));
+            document.getElementById('guide-download-btn')?.addEventListener('click', () => trackDownload('Guide Step 2'));
+        });
+    </script>
 </head>
 <body>
     <div class="bg-glow" id="accent-glow-element"></div>
@@ -171,7 +197,7 @@
                     <h3>Скачайте готовый файл мода</h3>
                     <p>Нажмите на кнопку ниже, чтобы скачать скомпилированную версию мода:</p>
                     <div style="margin-top: 10px;">
-                        <a href="star-assist-1.0.0.jar" download class="btn-primary" style="padding: 0.65rem 1.75rem; font-size: 0.95rem; display: inline-block;">Скачать star-assist-1.0.0.jar</a>
+                        <a href="star-assist-1.0.0.jar" download id="guide-download-btn" class="btn-primary" style="padding: 0.65rem 1.75rem; font-size: 0.95rem; display: inline-block;">Скачать star-assist-1.0.0.jar</a>
                     </div>
                 </div>
             </div>
