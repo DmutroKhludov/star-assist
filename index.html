@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Assist — Fabric 1.21.1 PvE-Тренажёр & Мод-Помощник</title>
+    <meta name="description" content="Star Assist — это функциональный клиентский PvE мод-помощник для Minecraft 1.21.1 с функциями автоматической наводки, умного удара и футуристичными кастомизируемыми визуалами.">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="Star Assist — Fabric 1.21.1 Client Mod">
+    <meta property="og:description" content="Умный PvE-помощник для одиночной игры и локальных серверов с автонаводкой и кастомным визуалом.">
+    <meta property="og:image" content="assets/logo.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Unique Icons -->
+    <link rel="icon" type="image/jpg" href="assets/logo.jpg">
+</head>
+<body>
+    <div class="bg-glow" id="accent-glow-element"></div>
+    <div class="bg-glow-left"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo" id="site-logo">
+                ⭐ Star <span>Assist</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Функции</a></li>
+                <li><a href="#customizer">Кастомизация</a></li>
+                <li><a href="#guide">Инструкция</a></li>
+            </ul>
+            <a href="https://github.com/DmutroKhludov/star-assist" class="nav-btn" target="_blank" id="nav-github-btn">GitHub</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-logo-container" id="hero-logo">
+            <img src="assets/logo.jpg" alt="Star Assist Logo">
+        </div>
+        <div class="badge" id="hero-badge">
+            <span id="badge-dot"></span> Fabric 1.21.1 Mod
+        </div>
+        <h2 id="hero-title">Повысь свой уровень PvE с <span>Star Assist</span></h2>
+        <p id="hero-desc">Мощный клиентский тренажёр и мод-помощник для одиночной игры и локальных сессий. Автоматическая наводка, умная атака с расчётом кулдауна и превосходный кастомизируемый визуал.</p>
+        <div class="hero-btns">
+            <a href="#guide" class="btn-primary" id="hero-get-started-btn">Установить</a>
+            <a href="https://github.com/DmutroKhludov/star-assist" class="btn-secondary" target="_blank" id="hero-github-btn">Исходный код</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-title">
+            <h2>Особенности мода</h2>
+            <p>Всё необходимое для комфортных PvE тренировок в одном клиенте</p>
+        </div>
+        <div class="features-grid">
+            <!-- Lock-on Camera -->
+            <div class="feature-card" id="card-lockon">
+                <div class="card-glow"></div>
+                <div class="feature-icon">🎯</div>
+                <h3>Lock-on Камера</h3>
+                <p>При удержании колёсика мыши прицел плавно доводится до ближайшего противника в радиусе 12 блоков. Тонко настраиваемая плавность движения предотвращает резкие подёргивания.</p>
+            </div>
+
+            <!-- AutoHit & AutoJump -->
+            <div class="feature-card" id="card-autohit">
+                <div class="card-glow"></div>
+                <div class="feature-icon">⚔️</div>
+                <h3>Умная Атака (AutoHit)</h3>
+                <p>Автоматически наносит удары с учётом шкалы кулдауна оружия. Интеграция с автоматическим прыжком (AutoJump) обеспечивает проведение только критических ударов для максимального урона.</p>
+            </div>
+
+            <!-- Visual TargetESP & Crystals -->
+            <div class="feature-card" id="card-targetesp">
+                <div class="card-glow"></div>
+                <div class="feature-icon">🔮</div>
+                <h3>Анимированные Кристаллы</h3>
+                <p>Красивые вращающиеся кристаллы вокруг вашей текущей цели с поддержкой физики покачивания. Позволяет мгновенно ориентироваться в пылу сражения.</p>
+            </div>
+
+            <!-- Custom Visual Colors -->
+            <div class="feature-card" id="card-colorizer">
+                <div class="card-glow"></div>
+                <div class="feature-icon">🌈</div>
+                <h3>Спектр Цветов & Радуга</h3>
+                <p>Удобная настройка цвета Hue (от 0 до 360°) и режим переливающейся радуги для всех визуалов: ChinaHat, TargetESP, Trails, Tracers, хитбоксов и траекторий.</p>
+            </div>
+
+            <!-- Target HUD -->
+            <div class="feature-card" id="card-hud">
+                <div class="card-glow"></div>
+                <div class="feature-icon">📊</div>
+                <h3>Детальный Target HUD</h3>
+                <p>Отображает полную информацию о цели: имя, точное здоровье с полоской окраски, надетую броню и предметы в руках для быстрого анализа соперника.</p>
+            </div>
+
+            <!-- ChestESP & Trajectories -->
+            <div class="feature-card" id="card-other-render">
+                <div class="card-glow"></div>
+                <div class="feature-icon">👁️</div>
+                <h3>Рендеринг и обводы</h3>
+                <p>Подсвечивание сундуков (ChestESP) волной цветов по координатам, линии трассировщиков до игроков (Tracers) и точный расчёт траекторий полёта снарядов.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customizer Showcase (Interactive Demo) -->
+    <section class="showcase-section" id="customizer">
+        <div class="showcase-container">
+            <div class="showcase-preview" id="customizer-preview">
+                <div class="visual-scene">
+                    <div class="hat-simulator" id="hat-sim"></div>
+                    <div class="player-simulator"></div>
+                    <div class="crystals-container">
+                        <div class="crystal-element crystal-1" id="cryst-1"></div>
+                        <div class="crystal-element crystal-2" id="cryst-2"></div>
+                        <div class="crystal-element crystal-3" id="cryst-3"></div>
+                        <div class="crystal-element crystal-4" id="cryst-4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-controls">
+                <h3>Интерактивная кастомизация</h3>
+                <p>Попробуйте настроить цветовую палитру визуала прямо здесь! Перетащите слайдер оттенка (Hue) или включите режим переливающейся радуги (Rainbow), чтобы увидеть, как меняются эффекты мода.</p>
+                
+                <div class="control-group">
+                    <div class="control-label">
+                        <span>Цветовой тон (Hue)</span>
+                        <span class="control-value" id="hue-val">48°</span>
+                    </div>
+                    <input type="range" min="0" max="360" value="48" class="slider-input" id="hue-slider">
+                </div>
+
+                <div class="toggle-container">
+                    <div class="toggle-info">
+                        <h4>Режим радуги (Rainbow)</h4>
+                        <p>Плавный автоматический перелив всех цветов в реальном времени</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="rainbow-toggle">
+                        <span class="slider-toggle"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup / Guide Section -->
+    <section class="guide-section" id="guide">
+        <div class="section-title">
+            <h2>Инструкция по установке и сборке</h2>
+            <p>Три простых шага для запуска модификации</p>
+        </div>
+        
+        <div class="steps-list">
+            <!-- Step 1 -->
+            <div class="step-item" id="step-clone">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h3>Скачайте или клонируйте репозиторий</h3>
+                    <p>Клонируйте репозиторий с исходным кодом мода с помощью git:</p>
+                    <div class="code-container">
+                        <span id="code-git">git clone https://github.com/DmutroKhludov/star-assist.git</span>
+                        <button class="code-btn" onclick="copyText('code-git')">Копировать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-item" id="step-config">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h3>Настройте версии зависимостей</h3>
+                    <p>Откройте файл <a href="file:///C:/Users/Dimasta/Desktop/anticheat-test/gradle.properties" style="color: var(--accent-color); text-decoration: underline;">gradle.properties</a>. Установите подходящие версии Fabric Loader, Fabric API и Minecraft (1.21.1) с сайта <a href="https://fabricmc.net/develop" target="_blank" style="color: var(--accent-color); text-decoration: underline;">fabricmc.net</a>.</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-item" id="step-build">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h3>Соберите JAR файл</h3>
+                    <p>Скомпилируйте мод с помощью Gradle. Собранный JAR-файл появится в директории <code>build/libs/</code>:</p>
+                    <div class="code-container">
+                        <span id="code-build">./gradlew build</span>
+                        <button class="code-btn" onclick="copyText('code-build')">Копировать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer Banner -->
+        <div class="disclaimer-banner" id="disclaimer">
+            <div class="disclaimer-icon">⚠️</div>
+            <div class="disclaimer-text">
+                <h4>Важная информация об области применения</h4>
+                <p>Данный мод имитирует нажатия кнопок обзора и автоатаки на стороне клиента. Использование его на публичных серверах с включёнными системами античитов (AAC, Matrix, Grim и др.) может привести к автоматической блокировке. Мод предназначен исключительно для ознакомительных целей, одиночной игры и локальных сессий.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#features">Функции</a>
+                <a href="#customizer">Кастомизация</a>
+                <a href="#guide">Инструкция</a>
+                <a href="https://github.com/DmutroKhludov/star-assist" target="_blank">GitHub</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Star Assist. Разработано для Fabric 1.21.1.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Customizer Scripts -->
+    <script>
+        const hueSlider = document.getElementById('hue-slider');
+        const hueVal = document.getElementById('hue-val');
+        const rainbowToggle = document.getElementById('rainbow-toggle');
+        const root = document.documentElement;
+
+        let rainbowActive = false;
+        let currentHue = 48;
+        let animationFrameId = null;
+
+        function updateColor(hue) {
+            root.style.setProperty('--accent-hue', hue);
+            hueVal.textContent = Math.round(hue) + '°';
+        }
+
+        function animateRainbow() {
+            if (!rainbowActive) return;
+            // Увеличиваем оттенок для создания перелива (радуги)
+            currentHue = (currentHue + 0.5) % 360;
+            updateColor(currentHue);
+            animationFrameId = requestAnimationFrame(animateRainbow);
+        }
+
+        hueSlider.addEventListener('input', (e) => {
+            if (rainbowActive) return;
+            currentHue = e.target.value;
+            updateColor(currentHue);
+        });
+
+        rainbowToggle.addEventListener('change', (e) => {
+            rainbowActive = e.target.checked;
+            if (rainbowActive) {
+                hueSlider.disabled = true;
+                animateRainbow();
+            } else {
+                hueSlider.disabled = false;
+                cancelAnimationFrame(animationFrameId);
+                currentHue = hueSlider.value;
+                updateColor(currentHue);
+            }
+        });
+
+        // Copy button action
+        function copyText(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Скопировано в буфер обмена: ' + text);
+            }).catch(err => {
+                console.error('Ошибка копирования: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
